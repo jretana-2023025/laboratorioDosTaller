@@ -1,0 +1,462 @@
+{
+	"info": {
+		"_postman_id": "a63671b5-63b6-4860-b5e1-b073a9fc2656",
+		"name": "sistemaDeAdopcion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956954"
+	},
+	"item": [
+		{
+			"name": "obtenerUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "hola",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "palacios",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "papu1",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "papa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1789ASD/m",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "45612407",
+							"type": "text"
+						},
+						{
+							"key": "profilePicture",
+							"type": "file",
+							"src": "postman-cloud:///1efe0227-c58f-47d0-8e01-272892c43a3f"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2036/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2036",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userLogin",
+							"value": "ppalacios123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1789ASD/m",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2036/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2036",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verUsuario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NzljMDIwZDEyZWE0ZmY4ZTJjNTliZWUiLCJ1c2VybmFtZSI6InBwYWxhY2lvczEyMyIsIm5hbWUiOiJwYWJsbyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzM4MzUxOTY0LCJleHAiOjE3MzgzNjI3NjR9.h2tYzBZbqt41ST4VgStlBwr6Bt8oEI7aqss-Mu3kPjk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Authorization",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NzljMDIwZDEyZWE0ZmY4ZTJjNTliZWUiLCJ1c2VybmFtZSI6InBwYWxhY2lvczEyMyIsIm5hbWUiOiJwYWJsbyIsInJvbGUiOiJDTElFTlRFIiwiaWF0IjoxNzM4MzUxOTY0LCJleHAiOjE3MzgzNjI3NjR9.h2tYzBZbqt41ST4VgStlBwr6Bt8oEI7aqss-Mu3kPjk",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2036/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2036",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePassword",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "oldPassword",
+							"value": "1789ASD/m",
+							"type": "text"
+						},
+						{
+							"key": "newPassword",
+							"value": "1789ASD/mm",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2036/updatePasswordById/67a531519948739812b7b88d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2036",
+					"path": [
+						"updatePasswordById",
+						"67a531519948739812b7b88d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E1MzE1MTk5NDg3Mzk4MTJiN2I4OGQiLCJ1c2VybmFtZSI6InBwYWxhY2lvczEyMzMzIiwibmFtZSI6ImhvbGEiLCJyb2xlIjoiQ0xJRU5URSIsImlhdCI6MTczODk2MDA1MiwiZXhwIjoxNzM4OTcwODUyfQ.u_vpvDH5uWgnKGbaUkZyDEHXA4wf8SgqMLnQ4v6dMxo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "hola",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "surname",
+							"value": "palacios",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "ppalacios12333",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "asdf@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1789ASD/m",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "45612408",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "profilePicture",
+							"type": "file",
+							"src": [
+								"postman-cloud:///1efe0227-c58f-47d0-8e01-272892c43a3f"
+							],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2036/updateUser/67a531519948739812b7b88d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2036",
+					"path": [
+						"updateUser",
+						"67a531519948739812b7b88d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAnimal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2036/addAnimal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2036",
+					"path": [
+						"addAnimal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarAnimal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2036/listAnimal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2036",
+					"path": [
+						"listAnimal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2036/getAnimalById/67a6d236cbabf1fd78557868",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2036",
+					"path": [
+						"getAnimalById",
+						"67a6d236cbabf1fd78557868"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarPorId Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "pablo",
+							"type": "text"
+						},
+						{
+							"key": "especie",
+							"value": "perro",
+							"type": "text"
+						},
+						{
+							"key": "raza",
+							"value": "doberma",
+							"type": "text"
+						},
+						{
+							"key": "edadAproximada",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sexo",
+							"value": "macho",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2036/updateAnimal/67a6d236cbabf1fd78557868",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2036",
+					"path": [
+						"updateAnimal",
+						"67a6d236cbabf1fd78557868"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAnimal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "pablo",
+							"type": "text"
+						},
+						{
+							"key": "especie",
+							"value": "perro",
+							"type": "text"
+						},
+						{
+							"key": "raza",
+							"value": "doberma",
+							"type": "text"
+						},
+						{
+							"key": "edadAproximada",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sexo",
+							"value": "macho",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2036/deleteAnimal/67a6d236cbabf1fd78557868",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2036",
+					"path": [
+						"deleteAnimal",
+						"67a6d236cbabf1fd78557868"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "perro",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "perro blanco",
+							"type": "text"
+						},
+						{
+							"key": "appointment",
+							"value": "2025-02-08",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "pending",
+							"type": "text"
+						},
+						{
+							"key": "pet",
+							"value": "67a6e56173b9f4da5abacae0",
+							"type": "text"
+						},
+						{
+							"key": "keeper",
+							"value": "67a6e6b29750c640f588f417",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2036/appointment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2036",
+					"path": [
+						"appointment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
